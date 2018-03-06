@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        {
+            margin: 0px;
+            padding: 0px;
+            outline:none;
+        }
+        body{
+            font-family: sans-serif;
+            margin: 20px;
+        }
+        .input-container{
+            position: relative;
+            display:inline-block;
+        }
+        .input-container label{
+            position: absolute;
+            left: 17px;
+            top:  15px;
+        }
+        .input-placeholder{
+            color: rgb(100, 100, 100);
+            opacity: 0;
+            transition: all .3s ease;
+        }
+        .input-label{
+            color: rgb(24, 24, 24);
+            transition: all .3s ease;
+        }
+
+        input[type="text"]{
+            padding: 15px 17px 10px 17px;
+            background-color: rgba(231, 231, 231, 0.705);
+            border-radius: 3px;
+            border: 0px solid blue;
+            border-bottom: 1px solid rgb(177, 177, 177);
+        
+        }
+
+        .input-container input[type="text"]:focus ~ label.input-label,
+        .input-container input[type="text"]:valid ~ label.input-label{
+            transform: translate3d(0px,-15px,0px);
+            font-size: 12px; 
+        }
+
+        .input-container input[type="text"]:focus ~ label.input-placeholder{
+            opacity: 1;
+        }
+        .input-container input[type="text"]:not(valid) ~ label.input-placeholder{
+            opacity: 1;
+        }
+
+    </style>
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    <form action="">
+        <div class="input-element input-error">
+            <div class='input-container'>
+                <input type="text" name="" id="input" required>
+                <label for="input" class="input-label">Nombre</label>
+                <label for="input" class="input-placeholder">Ej: Guille Speicher</label>
+            </div>
+            <p>Ingrese su nombre</p>
+        </div>
+
+    </form>
+</body>
+
+</html>
